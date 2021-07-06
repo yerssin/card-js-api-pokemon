@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐯pokemón</title>
+
+    <link
+      rel="shortcut icon"
+      href="/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./estilos.css" />
+  </head>
+  <body>
+    <main class="flex"></main>
+    <template id="template-card">
+      <article class="card">
+        <img src="/images/bg-pattern-card.svg" class="card-header" alt="" />
+        <div class="card-body">
+          <img
+            src="/images/image-victor.jpg"
+            alt="imagen mia"
+            class="card-body-img"
+          />
+          <h1 class="card-body-title">yerssin rios <span>28</span></h1>
+          <p class="card-body-text">Venezuela</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-footer-social">
+            <h3>80k</h3>
+            <p>Ataque</p>
+          </div>
+
+          <div class="card-footer-social">
+            <h3>1000k</h3>
+            <p>Especial</p>
+          </div>
+
+          <div class="card-footer-social">
+            <h3>1.4k</h3>
+            <p>Defensa</p>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

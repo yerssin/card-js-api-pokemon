@@ -1,0 +1,93 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark: hsl(229, 23%, 23%);
+  --dark-gray: hsl(240, 2%, 47%);
+  --light-gray: hsl(233, 5%, 69%);
+}
+
+html {
+  /* para que mi caja tenga una medida y todo lo de adentro se aprete y no aumente el tamaño de mi caja */
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh; /* le indica a las imagenes que se muevan de abajo para arriba 50vw y de derecha a izquiera */
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* vh sirve para calcular el tamaño de la pantalla, tlf, mac, tv */
+}
+
+.card {
+  background-color: white;
+  width: 326px;
+  border-radius: 16px;
+  overflow: hidden; /* recortar y ajusta el contenido en las dimensiones de mi caja */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* sombreado */
+
+  &-header {
+    /* se usa para acceder trabajando con sass */
+    width: 100%;
+    display: block;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.356);
+
+    &-img {
+      width: 200px;
+      height: 200px;
+      border: 5px solid white;
+      background-color: white;
+      border-radius: 50%;
+      margin-top: calc(-100px - 5px); /* esta es la mitad de la imagen */
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      text-transform: capitalize; /* transforma la primera letra en mayuscula */
+      span {
+        color: var(--light-gray);
+        font-weight: 100;
+      }
+    }
+    &-text {
+      color: var(--light-gray);
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  &-footer {
+    display: flex; /* alinear en una sola fila */
+    justify-content: space-around; /* colocar las tres ordenadas en la fila */
+
+    &-social {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      p {
+        letter-spacing: 1px; /* para separar letras de una palabra */
+      }
+    }
+  }
+}
